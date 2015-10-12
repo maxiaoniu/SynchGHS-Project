@@ -24,7 +24,7 @@ Finish(id,level)
 For master node:
 State
 round                int                                        0
-gathering         boolean[], size n                all 0 
+gathering         boolean[], size n                           all 0 
 //this boolean list is to record the finish message from all the nodes
 G(V,E)   
 
@@ -44,17 +44,17 @@ While gathering all boolean == 1
 
 For each node i:
 States
-(Name)                        (data)                     (initial value)
-id                                   int                             uid                                                              
+(Name)                      (data)                     (initial value)
+id                           int                             uid                                                              
 component                    int                             uid
-level                              int                               0
-local_MWOE             (int m, int n,int w)         null                                                           //To record the MWOE of this node
-global_MWOE           (int m, int n,int w)         null                                                          //To record the MWOE which this node has ever known
-received_MWOE       list of (int m, int n, int w)        null                                                          //To record the message of MWOE from different component  
-parent                            int                             null                                                         //To record the parent of this node in the spanning forest
-channel_MWOE            int                             null                                                         //To record the channel of the transmitting of the global_MWOE
-neighbor               list of tuple(j,w,state)         input value                                             //state of each neighbor edge belongs to {basic, branch, reject}
- 
+level                        int                               0
+local_MWOE                (int m, int n,int w)               null                                                         //To record the MWOE of this node
+global_MWOE               (int m, int n,int w)               null                                                         //To record the MWOE which this node has ever known
+received_MWOE         list of (int m, int n, int w)          null                                                         //To record the message of MWOE from different component  
+parent                       int                             null                                                         //To record the parent of this node in the spanning forest
+channel_MWOE                 int                             null                                                         //To record the channel of the transmitting of the global_MWOE
+neighbor              list of tuple(j,w,state)            input value                                                     //state of each neighbor edge belongs to {basic, branch, reject}
+   
 Message Generation and State Transition
 
 Receiving Start(round)
